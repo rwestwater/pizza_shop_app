@@ -25,7 +25,26 @@ get '/pizza_orders/:id' do
   erb(:show)
 end
 
-
 # UPDATE existing_orders
 
-# DELETE orders
+
+#DELETE orders
+# get '/pizza_orders/:id' do
+#   @order = PizzaOrder.delete()
+#   erb(:index)
+# end
+
+post '/pizza_orders/:id' do
+  @order = PizzaOrder.new()
+  @order.delete()
+  erb(:show)
+end
+
+# REDIRECT Orders
+get "/pizza_orders" do
+  redirect '/B'
+end
+
+get "/B" do
+  redirect request.referer
+end
