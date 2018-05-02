@@ -28,23 +28,15 @@ end
 # UPDATE existing_orders
 
 
+
 #DELETE orders
-# get '/pizza_orders/:id' do
-#   @order = PizzaOrder.delete()
-#   erb(:index)
-# end
-
-post '/pizza_orders/:id' do
-  @order = PizzaOrder.new()
+post '/pizza_orders/:id/delete' do
+  @order = PizzaOrder.find(params[:id])
   @order.delete()
-  erb(:show)
+  redirect to ('/pizza_orders')
 end
 
-# REDIRECT Orders
-get "/pizza_orders" do
-  redirect '/B'
-end
-
-get "/B" do
-  redirect request.referer
+# EDIT Orders
+get '/pizza_orders/:id/edit' do
+erb(:edit)
 end
