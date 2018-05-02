@@ -1,9 +1,9 @@
-<p>All the pizzas!</p>
+<h1><p>All the pizzas!</p></h1>
 
 <% for order in @orders  %>
-  <p>Name: <%= order.pretty_name() %></p>
-  <p>Order: <%= order.quantity()  %> X <%= order.topping() %></p>
-  <p><a href="/pizza_orders/<%= order.id %>">Show Order</a></p>
+  <p><h3>Name: <%= order.pretty_name() %></h3></p>
+  <p><h3>Order: <%= order.quantity()  %> X <%= order.topping() %></h3></p>
+  <p><h3><a href="/pizza_orders/<%= order.id %>">Show Order</a></h3></p>
 
 
 
